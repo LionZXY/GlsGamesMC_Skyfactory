@@ -14,7 +14,8 @@ ADD eula.txt /minecraft/eula.txt
 ADD server.properties /minecraft/server.properties
 ADD ops.json /minecraft/ops.json
 ADD mods/* /minecraft/mods/
-RUN sed -i -e 's/B:"Prestige Enabled Default"=false/B:"Prestige Enabled Default"=true/g' /minecraft/config/prestige.cfg
+RUN sed -i -e 's/B:"Prestige Enabled Default"=false/B:"Prestige Enabled Default"=true/g' /minecraft/config/prestige.cfg && \
+	sed -i -e 's/B:NewWorldMode=false/B:NewWorldMode=true/g' /minecraft/config/prestige.cfg
 
 
 CMD cd /minecraft/ && ./ServerStart.sh
