@@ -12,6 +12,7 @@ RUN chmod +x /minecraft/ServerStart.sh
 ADD settings.sh /minecraft/settings.sh
 ADD eula.txt /minecraft/eula.txt
 ADD server.properties /minecraft/server.properties
+ADD ops.json /minecraft/ops.json
 ADD mods/* /minecraft/mods/
 
 CMD cd /minecraft/ && ./ServerStart.sh
